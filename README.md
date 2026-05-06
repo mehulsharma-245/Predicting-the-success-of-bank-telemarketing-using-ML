@@ -1,11 +1,11 @@
 # Predicting the success of bank telemarketing using ML
-Objective — Predict whether a customer will subscribe to a term deposit using machine learning, helping banks optimize telemarketing campaigns and reduce wasted outreach.
-Dataset — Real-world bank telemarketing data containing customer demographics, contact history, and campaign outcomes, with a notable class imbalance (85.1% No, 14.9% Yes).
-Missing Value Treatment — Columns like Contact (26% missing) and P-outcome (75% missing) were handled using Iterative Imputer rather than being dropped, which improved model accuracy.
-Exploratory Data Analysis — Key insights uncovered: May had peak contacts, blue-collar and management jobs dominated, most clients had secondary education, and cellular was the primary contact method.
-Feature Engineering — The last contact date was split into year, month, and weekday; categorical variables were encoded via One-Hot Encoding; numerical features were standardized using Standard Scaling.
-Dimensionality Reduction — PCA and SVD were tested but showed no significant improvement, so the full original feature set was retained for training.
-Model Training — Six classifiers were evaluated: Logistic Regression, Decision Tree, Random Forest, KNN, XGBoost, and LightGBM, using Macro F1 Score as the primary metric.
-Best Model — LightGBM achieved the highest Macro F1 Score of 0.77, outperforming all other models both before and after hyperparameter tuning.
-Deployment Recommendation — Integrate LightGBM into the bank's CRM to generate per-client probability scores, enabling tiered campaign targeting: high, medium, and low probability segments.
-Continuous Improvement — The model should be periodically retrained with new campaign data, while tracking KPIs such as conversion rate, customer acquisition cost, and customer lifetime value.
+- **Objective**: Predict whether a customer will subscribe to a term deposit using machine learning, helping banks optimize telemarketing campaigns and reduce wasted outreach.
+- **Dataset**: Real-world bank telemarketing data containing customer demographics, contact history, and campaign outcomes, with a notable class imbalance (85.1% No, 14.9% Yes).
+- **Missing Value Treatment**: Columns like Contact (26% missing) and P-outcome (75% missing) were handled using Iterative Imputer rather than being dropped, which improved model accuracy.
+- **Exploratory Data Analysis**:Key insights uncovered: May had peak contacts, blue-collar and management jobs dominated, most clients had secondary education, and cellular was the primary contact method.
+**Feature Engineering**: The last contact date was split into year, month, and weekday; categorical variables were encoded via One-Hot Encoding; numerical features were standardized using Standard Scaling.
+**Dimensionality Reduction**: PCA and SVD were tested but showed no significant improvement, so the full original feature set was retained for training.
+**Model Training**: Six classifiers were evaluated: Logistic Regression, Decision Tree, Random Forest, KNN, XGBoost, and LightGBM, using Macro F1 Score as the primary metric.
+**Best Model**: LightGBM achieved the highest Macro F1 Score of 0.77, outperforming all other models both before and after hyperparameter tuning.
+**Deployment Recommendation**: Integrate LightGBM into the bank's CRM to generate per-client probability scores, enabling tiered campaign targeting: high, medium, and low probability segments.
+**Continuous Improvement**: The model should be periodically retrained with new campaign data, while tracking KPIs such as conversion rate, customer acquisition cost, and customer lifetime value.
